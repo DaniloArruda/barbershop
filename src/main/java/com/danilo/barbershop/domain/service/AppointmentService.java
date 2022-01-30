@@ -13,11 +13,11 @@ public class AppointmentService {
     }
 
     public void save(Appointment appointment) throws BarberCommitedException, ClientCommitedException {
-        if (this.appointmentRepository.barberIsCommitedAtTime(appointment.barber, appointment.dateTime)) {
+        if (this.appointmentRepository.barberIsCommitedAtTime(appointment)) {
             throw new BarberCommitedException(appointment.barber);
         }
 
-        if (this.appointmentRepository.clientIsCommitedAtTime(appointment.client, appointment.dateTime)) {
+        if (this.appointmentRepository.clientIsCommitedAtTime(appointment)) {
             throw new ClientCommitedException(appointment.client);
         }
 

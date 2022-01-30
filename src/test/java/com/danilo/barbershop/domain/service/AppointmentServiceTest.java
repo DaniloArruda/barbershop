@@ -37,7 +37,7 @@ public class AppointmentServiceTest {
         var dateTime = LocalDateTime.of(2022, 2, 20, 10, 30);
         var appointment = new Appointment(dateTime, client, barber, task);
 
-        when(this.appointmentRepository.barberIsCommitedAtTime(barber, dateTime)).thenReturn(true);
+        when(this.appointmentRepository.barberIsCommitedAtTime(appointment)).thenReturn(true);
 
         assertThrows(BarberCommitedException.class, () -> this.appointmentService.save(appointment));
     }
@@ -50,7 +50,7 @@ public class AppointmentServiceTest {
         var dateTime = LocalDateTime.of(2022, 2, 20, 10, 30);
         var appointment = new Appointment(dateTime, client, barber, task);
 
-        when(this.appointmentRepository.barberIsCommitedAtTime(barber, dateTime)).thenReturn(false);
+        when(this.appointmentRepository.barberIsCommitedAtTime(appointment)).thenReturn(false);
 
         assertDoesNotThrow(() -> this.appointmentService.save(appointment));
     }
@@ -63,8 +63,8 @@ public class AppointmentServiceTest {
         var dateTime = LocalDateTime.of(2022, 2, 20, 10, 30);
         var appointment = new Appointment(dateTime, client, barber, task);
 
-        when(this.appointmentRepository.barberIsCommitedAtTime(barber, dateTime)).thenReturn(false);
-        when(this.appointmentRepository.clientIsCommitedAtTime(client, dateTime)).thenReturn(true);
+        when(this.appointmentRepository.barberIsCommitedAtTime(appointment)).thenReturn(false);
+        when(this.appointmentRepository.clientIsCommitedAtTime(appointment)).thenReturn(true);
 
         assertThrows(ClientCommitedException.class, () -> this.appointmentService.save(appointment));
     }
@@ -77,8 +77,8 @@ public class AppointmentServiceTest {
         var dateTime = LocalDateTime.of(2022, 2, 20, 10, 30);
         var appointment = new Appointment(dateTime, client, barber, task);
 
-        when(this.appointmentRepository.barberIsCommitedAtTime(barber, dateTime)).thenReturn(false);
-        when(this.appointmentRepository.clientIsCommitedAtTime(client, dateTime)).thenReturn(false);
+        when(this.appointmentRepository.barberIsCommitedAtTime(appointment)).thenReturn(false);
+        when(this.appointmentRepository.clientIsCommitedAtTime(appointment)).thenReturn(false);
 
         assertDoesNotThrow(() -> this.appointmentService.save(appointment));
     }
