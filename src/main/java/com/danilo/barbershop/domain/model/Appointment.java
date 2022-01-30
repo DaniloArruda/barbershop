@@ -1,4 +1,4 @@
-package com.danilo.barbershop.domain;
+package com.danilo.barbershop.domain.model;
 
 import java.time.Duration;
 import java.time.LocalDateTime;

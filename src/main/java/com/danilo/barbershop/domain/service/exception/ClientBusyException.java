@@ -2,7 +2,7 @@ package com.danilo.barbershop.domain.service.exception;
 
 import java.time.LocalDateTime;
 
-import com.danilo.barbershop.domain.Client;
+import com.danilo.barbershop.domain.model.Client;
 
 public class ClientBusyException extends Exception {
     public ClientBusyException(Client client, LocalDateTime startAt, LocalDateTime endAt) {

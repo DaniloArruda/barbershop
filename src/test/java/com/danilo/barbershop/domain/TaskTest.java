@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.math.BigDecimal;
 
+import com.danilo.barbershop.domain.model.Task;
+
 import org.junit.jupiter.api.Test;
 
 public class TaskTest {

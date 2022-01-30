@@ -2,9 +2,9 @@ package com.danilo.barbershop.domain.repository;
 
 import java.time.LocalDateTime;
 
-import com.danilo.barbershop.domain.Appointment;
-import com.danilo.barbershop.domain.Barber;
-import com.danilo.barbershop.domain.Client;
+import com.danilo.barbershop.domain.model.Appointment;
+import com.danilo.barbershop.domain.model.Barber;
+import com.danilo.barbershop.domain.model.Client;
 
 public interface AppointmentRepository {
     public void save(Appointment appointment);
