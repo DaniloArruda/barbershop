@@ -1,4 +1,4 @@
-package com.danilo.barbershop.domain.value_objects;
+package com.danilo.barbershop.domain.value_object;
 
 public class Name {
     public final String firstName;

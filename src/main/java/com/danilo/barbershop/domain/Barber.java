@@ -2,7 +2,7 @@ package com.danilo.barbershop.domain;
 
 import java.util.UUID;
 
-import com.danilo.barbershop.domain.value_objects.Name;
+import com.danilo.barbershop.domain.value_object.Name;
 
 public class Barber {
     public final UUID id;

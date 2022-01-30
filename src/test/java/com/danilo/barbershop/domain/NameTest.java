@@ -2,7 +2,7 @@ package com.danilo.barbershop.domain;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import com.danilo.barbershop.domain.value_objects.Name;
+import com.danilo.barbershop.domain.value_object.Name;
 
 import org.junit.jupiter.api.Test;
 
