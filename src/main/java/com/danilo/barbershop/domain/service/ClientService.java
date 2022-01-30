@@ -13,6 +13,9 @@ import com.danilo.barbershop.domain.service.exception.ClientBusyException;
 import com.danilo.barbershop.domain.service.exception.ClientNotFoundException;
 import com.danilo.barbershop.domain.service.exception.TaskNotFoundException;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class ClientService {
     private final ClientRepository clientRepository;
     private final AppointmentRepository appointmentRepository;

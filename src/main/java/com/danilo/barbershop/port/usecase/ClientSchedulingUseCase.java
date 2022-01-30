@@ -4,6 +4,9 @@ import com.danilo.barbershop.domain.service.ClientService;
 import com.danilo.barbershop.port.mailer.Mailer;
 import com.danilo.barbershop.port.usecase.request.ClientSchedulingRequest;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class ClientSchedulingUseCase implements UseCase<ClientSchedulingRequest, Void> {
     private final ClientService clientService;
     private final Mailer mailer;

@@ -6,5 +6,5 @@ import java.util.UUID;
 import com.danilo.barbershop.domain.model.Client;
 
 public interface ClientRepository {
-    public Optional<Client> findById(UUID id);
+    public Optional<Client> findById(UUID id) throws Exception;
 }

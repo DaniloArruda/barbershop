@@ -6,5 +6,5 @@ import java.util.UUID;
 import com.danilo.barbershop.domain.model.Task;
 
 public interface TaskRepository {
-    public Optional<Task> findById(UUID id);
+    public Optional<Task> findById(UUID id) throws Exception;
 }
