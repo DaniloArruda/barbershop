@@ -1,0 +1,15 @@
+version: '2'
+services:
+    barbershop:
+        container_name: barbershop
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: barbershop:latest
+        ports:
+            - 8080:8080
+        networks:
+            - spring-cloud-network
+networks:
+    spring-cloud-network:
+        driver: bridge
